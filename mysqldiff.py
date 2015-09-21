@@ -99,10 +99,10 @@ def diffColumn(a,b,c):
                #print "对比表 "+'\033[1;31;40m'+c+'\033[0m'+" 字段失败"
                print "对比表 "+'\033[1;31;40m'+c+'\033[0m'+" 字段存在差异"
                ab=diffList(aColumnKey[1],bColumnKey[1])
-               for linea in a:
-                       for lineb in b:
-                               if lineb.split()[0]==linea.split()[0] and  linea!=lineb and not  re.search('KEY ',linea):
-                                       print '\033[32;40m'+linea.ljust(40)+'\033[0m'+'\033[33;40m'+lineb+'\033[0m'
+        for linea in a:
+                for lineb in b:
+                        if lineb.split()[0]==linea.split()[0] and  linea!=lineb and not  re.search('KEY ',linea):
+                                print '\033[32;40m'+linea.ljust(40)+'\033[0m'+'\033[33;40m'+lineb+'\033[0m'
 def diffEC(a,b,c):        
 	if a[len(a)-1] != b[len(b)-1]:
 		print "对比表 "+'\033[1;31;40m'+c+'\033[0m'+" 引擎或字符集存在差异"
